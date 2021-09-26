@@ -1,6 +1,7 @@
 package ca.sheridancollege.jungjuyo.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -36,12 +37,22 @@ public class HomeController {
 			} 
 			
 		} catch (IllegalArgumentException ex){
-			
+			System.out.println(ex);
 			return "error.html";
 			
 		}
 		
 		return "output.html";
+	}
+	
+	@GetMapping("/record")
+	public String goRecord(Model model) {
+		model.addAttribute("books", ContainerDepartment.books);
+		model.addAttribute("electronics", ContainerDepartment.electronics);
+		model.addAttribute("furniture", ContainerDepartment.furniture);
+		model.addAttribute("bedding", ContainerDepartment.bedding);
+		
+		return "record.html";
 	}
 	
 }

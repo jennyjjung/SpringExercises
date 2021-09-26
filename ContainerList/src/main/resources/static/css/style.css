@@ -20,6 +20,10 @@ body {
 	text-align: left;
 }
 
+.list {
+	width: 500px;
+}
+
 input[type=text] {
 	margin: auto;
 	width: 100%;
@@ -30,3 +34,15 @@ input[type=text] {
 	text-align: center;
 }
 
+table {
+	margin: 30px auto 30px auto;
+	padding: 10px;
+	background-color: aliceblue;
+}
+
+table td,
+table th {
+	text-align: center;
+	width: 100px;
+	border-bottom: 1px solid #ddd;
+}

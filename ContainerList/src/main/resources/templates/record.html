@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>record</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css/"
+	th:href="@{/css/style.css}">
+</head>
+<body>
+	<h1>Container Record</h1><hr>
+	
+	<table>
+		<tr>
+			<th colspan="3">Books</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Course 1</th>
+		</tr>
+		<tr th:each="book : ${books}">
+			<td th:text="${book.id}"></td>
+			<td th:text="${book.name}"></td>
+			<td th:text="${book.volume}"></td>
+		</tr>
+	</table>
+		<table>
+		<tr>
+			<th colspan="3">Electronics</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Course 1</th>
+		</tr>
+		<tr th:each="electoronics : ${electoronics}">
+			<td th:text="${electoronics.id}"></td>
+			<td th:text="${electoronics.name}"></td>
+			<td th:text="${electoronics.volume}"></td>
+		</tr>
+	</table>
+		<table>
+		<tr>
+			<th colspan="3">Furniture</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Course 1</th>
+		</tr>
+		<tr th:each="furniture : ${furniture}">
+			<td th:text="${furniture.id}"></td>
+			<td th:text="${furniture.name}"></td>
+			<td th:text="${furniture.volume}"></td>
+		</tr>
+	</table>
+		<table>
+		<tr>
+			<th colspan="3">Bedding</th>
+		</tr>
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Course 1</th>
+		</tr>
+		<tr th:each="bedding : ${bedding}">
+			<td th:text="${bedding.id}"></td>
+			<td th:text="${bedding.name}"></td>
+			<td th:text="${bedding.volume}"></td>
+		</tr>
+	</table>
+	
+	<br><a href="/">Add Another</a>
+</body>
+</html>
