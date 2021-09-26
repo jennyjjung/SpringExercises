@@ -10,6 +10,7 @@ body {
     text-align: center;
 }
 
+.list,
 .form {
 	line-height: 1.8;
 	width: 200px;
