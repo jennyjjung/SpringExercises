@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
 <title>Item Added</title>
@@ -9,9 +9,12 @@
 </head>
 <body>
 	<h1>Container Added!</h1><hr>
-	
+	<h3 th:text="${container}">container</h3>
+	<h3 th:text="|Sent to: ${container.department}|"></h3>
 
-	<a href="/">Add Another</a><br>
-	<a href="/record">View Records</a>
+	<p>
+		<a href="/">Add Another</a><br>
+		<a href="/record">View Records</a>
+	</p>
 </body>
 </html>

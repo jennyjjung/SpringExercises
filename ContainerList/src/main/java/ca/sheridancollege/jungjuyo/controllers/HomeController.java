@@ -18,23 +18,31 @@ public class HomeController {
 	}
 	
 	@GetMapping("processContainer")
-	public String process(@RequestParam int id,
+	public String process(Model model,
+						  @RequestParam int id,
 						  @RequestParam String name,
 						  @RequestParam double volume) {
 		
 		try {
 			
 			Container container = new Container(id, name, volume);
+			
 			if (volume <= 10) {
+				container.setDepartment("Books");
 				ContainerDepartment.books.add(container);
 			} else if (volume > 10 && volume <= 50) {
+				container.setDepartment("Electronics");
 				ContainerDepartment.electronics.add(container);
 			} else if (volume > 50) {
-				if (name.contains("crate"))
+				if (name.contains("crate")) {
 					ContainerDepartment.furniture.add(container);
-				else
+					container.setDepartment("Furniture");
+				} else {
 					ContainerDepartment.bedding.add(container);
+					container.setDepartment("Bedding");
+				}
 			} 
+			model.addAttribute(container);
 			
 		} catch (IllegalArgumentException ex){
 			System.out.println(ex);

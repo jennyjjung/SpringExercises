@@ -24,6 +24,7 @@ public class Container implements Comparable<Container>, Serializable {
 	@NonNull
     private String name = "container";
     private double volume = 1.0;
+    private String department = "NA";
     
     /**
      * Construct a container with a specific name and
@@ -93,6 +94,10 @@ public class Container implements Comparable<Container>, Serializable {
             throw new IllegalArgumentException("Error: size must be greater"
                 + " than 0.");
         }
+    }
+    
+    public void setDepartment(String department) {
+    	this.department = department;
     }
     
     /**
