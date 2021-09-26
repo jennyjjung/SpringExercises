@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form {
+	line-height: 1.8;
+	width: 200px;
+	margin: 20px auto 0px;
+	border: 2px dashed blue;
+	padding: 20px;
+	text-align: left;
+}
+
+input[type=text] {
+	margin: auto;
+	width: 100%;
+}
+
+.btn {
+	margin:auto;
+	text-align: center;
+}
+
