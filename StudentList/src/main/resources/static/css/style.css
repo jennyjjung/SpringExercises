@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+
+
+html,
+body {
+    background-color: #fff;;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div, p {
+	line-height: 1.8;
+	width: 300px;
+	margin: auto;
+}
+
+form {
+	text-align: left;
+}
+
+input[type=text],
+input[type=password] {
+	width: 100%;
+}
+
+.btn {
+	margin: auto;
+	text-align: center;
+}
+
+table {
+	margin: 30px auto 30px auto;
+	padding: 10px;
+	background-color: aliceblue;
+}
+
+table td,
+table th {
+	text-align: center;
+	width: 100px;
+	border-bottom: 1px solid #ddd;
+}
+
+
+

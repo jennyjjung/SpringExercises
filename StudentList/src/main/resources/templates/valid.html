@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Welcome</title>
+	<link rel="stylesheet" type="text/css" media="all"
+			href="../static/css/style.css"
+			th:href="@{/css/style.css}">
+</head>
+<body>
+	<h1>Welcome!</h1><hr>
+	
+	<form action="/info">
+		<div>
+			<label>Name: <br>
+				<input type="text" name="name"></label><br>
+			<label>Student Id: <br>
+				<input type="text" name="studentId"></label><br>
+			<label>Course 1: <br>
+				<input type="text" name="course1"></label><br>
+			<label>Course 2: <br>
+				<input type="text" name="course2"></label><br>
+			<label>Course 3: <br>
+				<input type="text" name="course3"></label><br>
+			<label>Course 4: <br>
+				<input type="text" name="course4"></label><br><br>
+			<label>Registered Co-op: 
+				<input type="checkbox" name="regiCoop"></label><br>
+			<label>Full Time: 
+				<input type="checkbox" name="fullTime"></label><br>
+			<label>Paid Tuition: 
+				<input type="checkbox" name="paidTuition"></label><br><br>
+			<div class="btn">
+				<input type="submit" value="submit">
+			</div><br>
+		</div>
+	</form>
+	
+	<a href="/record">View Student List</a>
+	
+</body>
+</html>

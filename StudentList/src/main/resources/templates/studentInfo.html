@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student List</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css"
+	th:href="@{/css/style.css}">
+</head>
+<body>
+
+	<h1>Student List</h1><hr>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>ID</th>
+			<th>Course 1</th>
+			<th>Course 2</th>
+			<th>Course 3</th>
+			<th>Course 4</th>
+			<th>Co-op</th>
+			<th>Full Time</th>
+			<th>Paid Tuition</th>
+		</tr>
+		
+		<tr th:each="student : ${students}">
+			<td th:text="${student.name}"></td>
+			<td th:text="${student.studentId}"></td>
+			<td th:text="${student.course1}"></td>
+			<td th:text="${student.course2}"></td>
+			<td th:text="${student.course3}"></td>
+			<td th:text="${student.course4}"></td>
+			<td th:text="${student.regiCoop}"></td>
+			<td th:text="${student.fullTime}"></td>
+			<td th:text="${student.paidTuition}"></td>
+		</tr>
+	</table>
+	<p>
+		<br><a href="/addStudent">Add Another Student</a>
+		<br><a href="/">Back to Login Page</a>
+	</p>
+</body>
+</html>
