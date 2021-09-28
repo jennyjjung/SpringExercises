@@ -8,14 +8,11 @@ import ca.sheridancollege.jungjuyo.beans.Player;
 
 @Controller
 public class HomeController {
-
+	
 	@GetMapping("/")
-	public String index(Model model) {
-		
+	public String goHome(Model model) {
 		model.addAttribute("player", new Player());
-		return "index.html";		
+		return "index.html";
 	}
-	
-	
-	
+
 }

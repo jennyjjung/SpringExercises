@@ -1,0 +1,49 @@
+@charset "ISO-8859-1";
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.list,
+.form {
+	line-height: 1.8;
+	width: 200px;
+	margin: 20px auto 0px;
+	border: 2px dashed blue;
+	padding: 20px;
+	text-align: left;
+}
+
+.list {
+	width: 500px;
+}
+
+input[type=text], 
+select {
+	margin: auto;
+	width: 100%;
+}
+
+.btn {
+	margin:auto;
+	text-align: center;
+}
+
+table {
+	margin: 30px auto 30px auto;
+	padding: 10px;
+	background-color: aliceblue;
+}
+
+table td,
+table th {
+	text-align: center;
+	width: 100px;
+	border-bottom: 1px solid #ddd;
+}
