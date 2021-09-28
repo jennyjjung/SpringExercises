@@ -16,7 +16,7 @@ public class Player implements Serializable {
     private int number;
     private int team;
    
-    public static final String[] TEAMS = {"NC Dinos", "DOOSAN Bears", 
+    public static final String[] KBOTEAMS = {"NC Dinos", "DOOSAN Bears", 
     		"KT Wiz", "LG Twins", "KIWOOM Heros", "KIA Tigers", "LOTTE Ziants",
     		"SAMSUNG Lions", "SSG Landers", "HANHWA Eagles"};
    
