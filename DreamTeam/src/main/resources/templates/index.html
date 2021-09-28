@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dream Team</title>
+</head>
+<body>
+	<h1>Create Your Dream Team!</h1><hr>
+	<form action="/player" th:object=${player}>
+		<label>First Name: <br>
+			<input type="text" name="firstName" required></label><br>
+		<label>Last Name: <br>
+			<input type="text" name="lastName" required></label><br>
+		<label>Jersey Number: <br>
+			<input type="text" name="number"></label><br>
+	
+		<seclect name="teamName">
+			<option th:each="t,stat: *{KBOTEAMS}" th:value="${stat.index}"
+				th:text="${t}">team</option><br><br>
+		</seclect>
+		<div><input type="submit"></div>
+	</form>
+
+
+</body>
+</html>
