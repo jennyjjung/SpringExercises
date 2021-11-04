@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dog Show</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css"
+	th:href="@{/css/style.css}"> 
+<link rel="icon" type="image/png" href="/images/logo.png" />
+</head> 
+<body>
+
+
+<nav class="row" id="navbar">
+	<div class="navbar__logo">
+		<a th:href="@{/}">
+		<img src="../static/images/logo.png" th:src="@{/images/logo.png}" 
+		alt="Dog Show Logo" class="logo"></a>
+	</div>
+	<div class="navbar__menu">
+		<ul class="navbar__menu"> 
+			<li class="navbar__menu__item"><a th:href="@{/}">Home</a></li>
+			<li class="navbar__menu__item active"><a th:href="@{/breeds}">Breed</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/register}">Register</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/viewDogList}">Dog List</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/viewShowList}">Show List</a></li>
+		</ul>
+	</div>
+</nav>
+	
+<section id="breed" class="section section__container">
+	<h1>Add Breed</h1><hr>
+	
+	<div class="container">
+		<form action="/addBreed" th:object="${breed}">
+			<div class="row">
+				<div class="col-40">
+					<label for="name">Breed</label>
+				</div>
+				<div class="col-60">
+					<input type="text" th:field="*{name}">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<input type="submit" value="Add New Breed">
+			</div>
+		</form>
+	</div>
+</section>
+
+<section id="breedList" class="section">
+	<div class="section__container">
+		<h1>Breed List</h1><hr>
+		
+		<div class="container">
+			<table width="100%">
+				<tr>
+					<th>Breed</th>
+				</tr>
+				<tr th:each="breed : ${breeds}">
+					<td th:text="${breed.name}"></td>
+				</tr>	
+			</table>
+		</div>
+	</div>
+</section>
+
+
+<footer id="contact" class="section">
+	<h2 class="contact__title">Contact Us</h1>
+	<h3 class="contact__email">trafalgar.dogshow@sheridan.prog</h2>
+	<p class="contact__rights">Copyright &copy; 
+	PROG32758 2021 by Juyoung Jung. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dog Show</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css"
+	th:href="@{/css/style.css}"> 
+<link rel="icon" type="image/png" href="/images/logo.png" />
+</head> 
+<body>
+
+
+<nav class="row" id="navbar">
+	<div class="navbar__logo">
+		<a th:href="@{/}">
+		<img src="../static/images/logo.png" th:src="@{/images/logo.png}" 
+		alt="Dog Show Logo" class="logo"></a>
+	</div>
+	<div class="navbar__menu">
+		<ul class="navbar__menu"> 
+			<li class="navbar__menu__item"><a th:href="@{/}">Home</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/breeds}">Breed</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/register}">Register</a></li>
+			<li class="navbar__menu__item active"><a th:href="@{/viewDogList}">Dog List</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/viewShowList}">Show List</a></li>
+		</ul>
+	</div>
+</nav>
+	
+<section id="dogList" class="section">
+	<!-- 	<div class="section__container"> -->
+		<h1>Dog List</h1><hr>
+		
+		<div class="container">
+			<table width="100%">
+				<col style="width:20%">
+				<col style="width:20%">
+				<col style="width:30%">
+				<col style="width:10%">
+				<col style="width:15%">
+				<col style="width:5%">
+				<col style="width:5%">
+				<tr>
+					<th>Name</th>
+					<th>Owner's Name</th>
+					<th>Breed</th>
+					<th>Gender</th>
+					<th>Category</th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr th:each="dog : ${dogs}">
+					<td th:text="${dog.name}"></td>
+					<td th:text="${dog.owner}"></td>
+					<td th:text="${dog.breed}"></td>
+					<td th:text="${dog.gender}"></td>
+					<td th:text="${dog.category}"></td>
+					<td><a th:href="@{/edit/{id}(id=${dog.id})}">
+					<img src="../static/images/editing.png" th:src="@{/images/editing.png}" 
+					alt="Editing icon" class="icon"></a></td>
+					<td><a th:href="@{/delete/{id}(id=${dog.id})}">
+					<img src="../static/images/bin.png" th:src="@{/images/bin.png}" 
+					alt="Delete icon" class="icon"></a></td>
+				</tr>	
+			</table>
+		</div>
+
+
+</section>
+
+
+<footer id="contact" class="section">
+	<h2 class="contact__title">Contact Us</h1>
+	<h3 class="contact__email">trafalgar.dogshow@sheridan.prog</h2>
+	<p class="contact__rights">Copyright &copy; 
+	PROG32758 2021 by Juyoung Jung. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
