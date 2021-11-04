@@ -1,0 +1,53 @@
+<!-- Image Sources
+	Main image : https://unsplash.com/ 
+	Icon : https://www.flaticon.com/
+	Logo : https://www.canva.com/    -->
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dog Show</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/style.css"
+	th:href="@{/css/style.css}"> 
+<link rel="icon" type="image/png" href="/images/logo.png" />
+</head> 
+<body>
+
+
+<nav class="row" id="navbar">
+	<div class="navbar__logo">
+		<a th:href="@{/}">
+		<img src="../static/images/logo.png" th:src="@{/images/logo.png}" 
+		alt="Dog Show Logo" class="logo"></a>
+	</div>
+	<div class="navbar__menu">
+		<ul class="navbar__menu"> 
+			<li class="navbar__menu__item active"><a th:href="@{/}">Home</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/breeds}">Breed</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/register}">Register</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/viewDogList}">Dog List</a></li>
+			<li class="navbar__menu__item"><a th:href="@{/viewShowList}">Show List</a></li>
+		</ul>
+	</div>
+</nav>
+	
+<section id="home">
+	<div class="home__textbox">
+		<h1>2021 Trafalgar <br> Dog Show !</h1>
+		<a th:href=@{#}>Register Now</a>
+	</div>
+</section>
+
+
+<footer id="contact" class="section">
+	<h2 class="contact__title">Contact Us</h1>
+	<h3 class="contact__email">trafalgar.dogshow@sheridan.prog</h2>
+	<p class="contact__rights">Copyright &copy; 
+	PROG32758 2021 by Juyoung Jung. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
