@@ -1,2 +1,2 @@
 # SpringExercises
-Practice Java Spring with simple projects
+Practice Java Spring with simple exercises
